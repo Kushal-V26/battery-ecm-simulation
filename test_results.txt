@@ -1,0 +1,4 @@
+main_run_all_tests
+{Unrecognized function or variable 'main_run_all_tests'.
+} 
+diary off
