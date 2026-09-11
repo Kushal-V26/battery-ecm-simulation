@@ -33,29 +33,29 @@ Simulation and estimation framework for a representative **NMC 18650 cell (2.0 A
 ### 1. Constant-Current Discharge
 Validates cell terminal voltage drop, internal resistance losses, and lower-cutoff behavior across different discharge rates:
 
-#### 0.5C Discharge Rate
-![0.5C Discharge](results/discharge_curve_0.5C.png)
-
-#### 1.0C Discharge Rate
-![1.0C Discharge](results/discharge_curve_1.0C.png)
+<p align="center">
+  <img src="results/discharge_curve_0.5C.png" width="45%" />
+  <img src="results/discharge_curve_1.0C.png" width="45%" />
+</p>
 
 ---
 
 ### 2. HPPC Test & Parameter Identification
-Evaluates dynamic voltage relaxation during current pulses and extracts internal ohmic resistance (R0):
+Evaluates dynamic voltage relaxation during current pulses and extracts internal ohmic resistance ($R_0$):
 
-#### HPPC Current & Voltage Profile
-![HPPC Profile](results/hppc_profile.png)
-
-#### Extracted R0 vs. Ground Truth
-![R0 Extraction](results/r0_extraction.png)
+<p align="center">
+  <img src="results/hppc_profile.png" width="45%" />
+  <img src="results/r0_extraction.png" width="45%" />
+</p>
 
 ---
 
 ### 3. Dynamic Drive-Cycle SOC Estimation (EKF vs. Open-Loop)
-Tests estimation performance against measurement noise (std = 2 mV) and an intentional **10% initial SOC bias** (SOC0 = 80% estimated vs. 90% true):
+Tests estimation performance against measurement noise ($\sigma = 2\text{ mV}$) and an intentional **10% initial SOC bias** ($SOC_0 = 80\%$ estimated vs. $90\%$ true):
 
-![SOC Estimation Comparison](results/soc_estimation_comparison.png)
+<p align="center">
+  <img src="results/soc_estimation_comparison.png" width="60%" />
+</p>
 
 ```text
 ============================================================
