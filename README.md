@@ -101,12 +101,6 @@ $$C_k = \left. \begin{bmatrix} \frac{\partial V_{\text{oc}}}{\partial \text{SOC}
 
 ---
 
-## 🚀 How to Run
 
-1. Clone or download the repository.
-2. Open MATLAB and navigate to the project root directory.
-3. Run the complete test suite from the Command Window:
-   ```matlab
-   main_run_all_tests
    ```
 4. All generated figures, diagnostic output, and test metrics will update directly in the `/results` directory.
