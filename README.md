@@ -61,13 +61,13 @@ Tests estimation performance against measurement noise ($\sigma = 2\text{ mV}$) 
   <img src="results/soc_estimation_comparison.png" width="60%" />
 </p>
 
-```text
+
 
 
 
 ⚙️ How It Works (Simplified)
 
-### 1. Battery Modeling (1RC Thevenin Model)
+1. Battery Modeling (1RC Thevenin Model)
 The battery terminal voltage is calculated from three components:
 
 Terminal Voltage (Vt) = Voc(SOC) - V_polarization - (I * R0)
@@ -76,17 +76,17 @@ Terminal Voltage (Vt) = Voc(SOC) - V_polarization - (I * R0)
 - I * R0: Instantaneous voltage drop across internal ohmic resistance.
 - V_polarization: Transient exponential voltage response modeled by a parallel R1-C1 circuit.
 
-### 2. State of Charge Tracking (EKF vs. Coulomb Counting)
+2. State of Charge Tracking (EKF vs. Coulomb Counting)
 - Coulomb Counting (Open-Loop): Integrates current over time. Any initial error or sensor drift remains permanently uncorrected.
 - Extended Kalman Filter (Closed-Loop): Continuously compares predicted terminal voltage with sensor measurements to dynamically correct SOC errors.
 
-## 📊 Results & Validation
+ 📊 Results & Validation
 
-### Parameter Extraction
+Parameter Extraction
 - **Nominal $R_0$**: `0.0200 Ω` | **Extracted $R_0$**: `0.0200 Ω` (0.00% Error)
 - **Nominal $R_1$**: `0.0150 Ω` | **Nominal $C_1$**: `2000.0 F` ($\tau = 30.0\text{ s}$)
 
-### SOC Estimation Performance (Dynamic Drive Cycle)
+SOC Estimation Performance (Dynamic Drive Cycle)
 Tested with **2 mV sensor noise** and an intentional **10% initial offset** ($\text{SOC}_0 = 80\%$ estimated vs. $90\%$ true):
 
 | Method | Initial Bias | Final RMSE | Convergence Time |
@@ -96,30 +96,3 @@ Tested with **2 mV sensor noise** and an intentional **10% initial offset** ($\t
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- MATLAB R2020b or later
-
-### Running the Project
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/Kushal-V26/proov-km-waechter-fix.git](https://github.com/Kushal-V26/proov-km-waechter-fix.git)
-   cd proov-km-waechter-fix
-   ```
-2. Open MATLAB and run:
-   ```matlab
-   main_run_all_tests
-   ```
-3. All plots and log files will automatically save to the `results/` folder.
-
----
-
-## 📄 License
-Distributed under the MIT License.
-
----
-
-
-   ```
-4. All generated figures, diagnostic output, and test metrics will update directly in the `/results` directory.
