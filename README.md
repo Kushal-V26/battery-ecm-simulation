@@ -65,8 +65,7 @@ Tests estimation performance against measurement noise ($\sigma = 2\text{ mV}$) 
 
 
 
-
-## ⚙️ How It Works (Simplified)
+⚙️ How It Works (Simplified)
 
 ### 1. Battery Modeling (1RC Thevenin Model)
 The battery terminal voltage is calculated from three components:
