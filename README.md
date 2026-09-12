@@ -70,16 +70,16 @@ Tests estimation performance against measurement noise ($\sigma = 2\text{ mV}$) 
 
 ### 1. Battery Modeling (1RC Thevenin Model)
 The battery terminal voltage is calculated from three components:
-$$\text{Terminal Voltage } (V_t) = V_{\text{oc}}(\text{SOC}) - V_{\text{polarization}} - (I \times R_0)$$
-- **$V_{\text{oc}}(\text{SOC})$**: Baseline open-circuit voltage determined by remaining battery charge.
-- **$I \times R_0$**: Instantaneous voltage drop across internal ohmic resistance.
-- **$V_{\text{polarization}}$**: Transient exponential voltage response modeled by a parallel $R_1 C_1$ circuit.
+
+Terminal Voltage (Vt) = Voc(SOC) - V_polarization - (I * R0)
+
+- Voc(SOC): Baseline open-circuit voltage determined by remaining battery charge.
+- I * R0: Instantaneous voltage drop across internal ohmic resistance.
+- V_polarization: Transient exponential voltage response modeled by a parallel R1-C1 circuit.
 
 ### 2. State of Charge Tracking (EKF vs. Coulomb Counting)
-- **Coulomb Counting (Open-Loop)** integrates current over time. Any initial error or sensor drift remains permanently uncorrected.
-- **Extended Kalman Filter (Closed-Loop)** continuously compares the predicted terminal voltage with simulated sensor measurements to dynamically correct SOC errors.
-
----
+- Coulomb Counting (Open-Loop): Integrates current over time. Any initial error or sensor drift remains permanently uncorrected.
+- Extended Kalman Filter (Closed-Loop): Continuously compares predicted terminal voltage with sensor measurements to dynamically correct SOC errors.
 
 ## 📊 Results & Validation
 
